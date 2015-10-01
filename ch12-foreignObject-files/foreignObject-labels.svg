@@ -19,7 +19,7 @@
         text[role="heading"] { 
             font: bold 64px sans-serif;        
             text-decoration: underline overline;  
-        
+            white-space: pre;
             fill: url(#blue-shine) darkBlue;        
         }
         html|* {
@@ -139,6 +139,6 @@
     </g>
     <text x="50%" text-anchor="middle" transform="translate(0,625)"
           textLength="400" lengthAdjust="spacingAndGlyphs"
-          xml:space="preserve" style="whitespace:preserve"
+          xml:space="preserve"
           role="heading"> SVG Shapes </text>
 </svg>
