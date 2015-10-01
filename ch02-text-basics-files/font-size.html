@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>font-size and SVG Coordinate Systems</title>
+    <style>
+        body {
+            background-color: lightYellow;
+            font: 6pt sans-serif;                     <!--1-->
+        }
+        svg {
+            display: block;
+            border: solid royalBlue;
+            background-color: lightCyan;
+            margin: 2em auto;
+            width: 95%;
+            max-width: 90vh;
+            height: auto;
+            min-height: 10em;
+            max-height: 90vh;                         <!--2-->
+        }
+    </style>
+</head>
+<body>
+    <p>This is 6pt HTML text.  
+       It is very tiny and difficult to read.</p>
+    <svg viewBox="0 0 100 100">                       <!--3-->
+        <text x="5" y="1em">This is 6pt SVG text.</text>
+        <text transform="translate(10,90) rotate(-30) scale(2,3)"
+              >This is also 6pt text.</text>          <!--4-->
+    </svg>
+</body>
+</html>

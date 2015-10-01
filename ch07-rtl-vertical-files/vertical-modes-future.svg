@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="4.3in" height="4.5in">
+    <title>Mixed Scripts and Writing Modes</title>
+    <style type="text/css">
+        svg {
+            font: 20px sans-serif;
+            stroke-width: 2px;
+        }
+        text {
+            fill: currentColor;
+        }
+        [writing-mode="tb"]{
+            writing-mode: vertical-rl;
+        }
+        [glyph-orientation-vertical="0"]{
+            text-orientation: upright;
+        }
+    </style>
+    <defs>
+        <circle id="anchor" r="3px" fill="currentColor"
+                stroke="currentColor" fill-opacity="0.5"/>      <!--1-->
+    </defs>
+    <rect fill="#CEE" width="100%" height="100%" />
+    <g color="darkGreen" text-anchor="start">
+        <g id="sample" fill="currentColor" >
+            <use xlink:href="#anchor" x="1em" y="2em" />
+            <text x="1em" y="2em" >Hi, SVG World!</text>        <!--2-->
+            
+            <use xlink:href="#anchor" x="2.5em" y="3em" />
+            <text x="2.5em" y="3em" >您好SVG世界！</text>       <!--3-->
+        </g>
+        <use xlink:href="#sample" transform="translate(0,50)" 
+             writing-mode="tb" />                               <!--4-->
+        <use xlink:href="#sample" transform="translate(100,50)" 
+             writing-mode="tb" glyph-orientation-vertical="0"/> <!--5-->
+    </g>
+    <g color="darkRed" text-anchor="end"
+       transform="translate(200,0)" >                           <!--6-->
+        <use xlink:href="#sample" transform="translate(140,0)" />
+        <use xlink:href="#sample" transform="translate(0,350)" 
+             writing-mode="tb" />
+        <use xlink:href="#sample" transform="translate(100,350)" 
+             writing-mode="tb" glyph-orientation-vertical="0"/>
+    </g>
+
+</svg>

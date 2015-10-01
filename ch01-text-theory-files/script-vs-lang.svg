@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="400" height="275" viewBox="0 0 400 275">
+    <title xml:lang="en">Scripts versus Languages</title>
+    <style type="text/css">
+        svg {
+            font-size: 28px;
+            font-family: Georgia, Times, serif;
+            background: #181122;
+            border: thin solid hsla(0,0%,100%,0.3);
+            margin: 11px;
+        }
+        text {
+            filter: url(#shine);
+            font-weight: bold;
+            stroke-width: 1px;
+        }
+        text:nth-of-type(1){
+            stroke: mediumBlue;
+            fill:   royalblue;
+        }
+        text:nth-of-type(2){
+            stroke: darkRed;
+            fill:   crimson;
+        }
+        text:nth-of-type(3){
+            stroke: darkGreen;
+            fill:   green;
+        }
+        text:nth-of-type(4){
+            stroke: purple;
+            fill: darkorchid;
+        }
+    </style>
+    <defs>
+        <filter id="shine">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+            <feColorMatrix values="1.5  0   0  0.5 0
+                                    0  1.5  0  0.5 0
+                                    0   0  1.5 0.5 0
+                                    0   0   0   1  -0.5" />
+            <feOffset dx="-2.5" dy="-1.5" />
+            <feComponentTransfer result="highlight">
+                <feFuncA type="linear" amplitude="2" />
+            </feComponentTransfer>
+            <feComposite in="blur" in2="highlight" operator="arithmetic" 
+                       k1="0" k2="1" k3="1" k4="0" result="lit"/>
+            <feComposite in2="SourceAlpha" operator="in"/>
+            <feComposite in2="SourceGraphic" operator="over" result="clipped"/>
+        </filter>
+    </defs>
+     
+    <text x="10" y="1em" xml:lang="la"
+          >Idem alphabetum, 
+        <tspan x="30" dy="1em">sed alia lingua</tspan></text>
+    <text x="10" y="3.5em" xml:lang="en"
+          >The same alphabet, 
+        <tspan x="30" dy="1em">but a different language</tspan></text>
+    <text x="10" y="6em" xml:lang="ga-IE"
+          >An aibítir céanna, 
+        <tspan x="30" dy="1em">ach le éagsúla teanga</tspan></text>
+    <text x="10" y="8.5em" xml:lang="vi"
+          ><tspan  font-size="80%">Bảng chữ cái giống nhau, 
+        <tspan x="30" dy="1em">nhưng một ngôn ngữ khác nhau</tspan></tspan></text>
+</svg>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Color-Matching Icons</title>
+    <style>
+        body {
+            background-color: #DEF;
+            font-family: sans-serif;
+            font-size: x-large;
+        }
+        svg.icon {
+            display: inline-block;
+            height: 1em;
+            width: 1em;
+            vertical-align: text-bottom;         <!--1-->
+        }
+        svg.defs {
+            display: block;
+            position: absolute;
+            left: -10;
+            height: 0; width: 0;                 <!--2-->
+        }
+    </style>
+</head>
+<body>
+    <svg class="defs" aria-hidden="true"
+         focusable="false" width="0" height="0">
+        <symbol id="external-link" viewBox="-10 -10 20 20">    <!--3-->
+            <circle r="9.5" 
+                    fill="currentColor" fill-opacity="0.3" />
+            <g fill="currentColor" font-size="6">
+                <text x="-8" y="-2" >W</text>
+                <text x="-3" y="3" >W</text>
+                <text x="2" y="8" >W</text>
+            </g>
+        </symbol>
+        <symbol id="pdf" viewBox="0 0 20 20">                   <!--4-->
+            <rect id="r" x="0.5" y="0.5" width="14" height="15"
+                  fill="white" stroke="currentColor" />
+            <use xlink:href="#r" x="1.5" y="2" />
+            <use xlink:href="#r" x="3" y="4" />
+            <text x="5" y="13" fill="currentColor"
+                  font-size="6">PDF</text>
+        </symbol>
+    </svg>
+    <p>An external link with an informative icon, to the
+    <a href="http://www.w3.org/TR/SVG11/Overview.html">SVG 1.1
+        <svg class="icon">                                      <!--5-->
+            <use xlink:href="#external-link">
+                <title>External link</title>
+            </use>
+        </svg></a> 
+        specifications on the Web.</p>
+    <p>Or you can download the 
+        <a href="http://www.w3.org/TR/SVG11/REC-SVG11-20110816.pdf"
+           >complete specifications as a single file 
+        <svg class="icon">
+            <use xlink:href="#pdf">
+                <title>PDF file</title>
+            </use>
+        </svg></a>.</p>
+</body>
+</html>

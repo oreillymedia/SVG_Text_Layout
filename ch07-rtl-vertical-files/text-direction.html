@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Multilingual SVG Text Direction and Layout</title>
+    <style>
+        table {
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: collapse;
+        }
+        th:nth-child(n-2) {
+            width: 3em;
+        }
+        td, th {
+            border: solid royalBlue;   
+            padding: 0;
+            background: #DEF;
+        }
+        svg {
+            height: 5em;
+            width: 100%;
+        }
+        line {
+            stroke: gray;
+        }
+        text {
+            fill: currentColor;
+        }
+        .start  { color: darkGreen; }
+        .middle { color: navy; }
+        .end    { color: darkRed; }
+    </style>
+</head>
+<body>
+<script>
+(function(){
+    var svgNS = "http://www.w3.org/2000/svg";
+    var doc = document;
+    
+    var strings = [ "Hello, World!",
+                    "مرحبا أيها العالم!",
+                    "Γειά Σου Κόσμε!",
+                    "שלום העולם!" ],
+        directions = [ "ltr", "rtl" ],
+        anchors = [ "start", "middle", "end" ];
+    
+    var table = doc.createElement("table"),
+        tbody = doc.createElement("tbody");
+    table.insertBefore(tbody, null);
+    
+    var row, rowh, rowsub, cell, svg, line, text;
+    for (var i=0, a=anchors.length; i<a; i++){        
+        for (var j=0, d=directions.length; j<d; j++) {
+            row = doc.createElement("tr");
+            rowh = doc.createElement("th");
+            rowh.textContent = anchors[i];
+            row.setAttribute("class", anchors[i]);
+            row.insertBefore(rowh, null);
+            rowsub = doc.createElement("th");
+            rowsub.textContent = directions[j];
+            row.insertBefore(rowsub, null);
+            
+            cell = doc.createElement("td");            
+            row.insertBefore(cell, null);
+            
+            svg = doc.createElementNS(svgNS, "svg");
+            svg.setAttribute("direction", directions[j]);
+            svg.setAttribute("text-anchor", anchors[i]);
+            cell.insertBefore(svg, null);
+            
+            line = doc.createElementNS(svgNS, "line");
+            line.setAttribute("x1", "50%");
+            line.setAttribute("x2", "50%");
+            line.setAttribute("y2", "100%");
+            svg.insertBefore(line, null);
+            
+            for (var k=0, s=strings.length; k<s; k++) {
+                text = doc.createElementNS(svgNS, "text");
+                text.textContent = strings[k];
+                text.setAttribute("x", "50%");
+                text.setAttribute("y", (k+1.5) + "em");
+                svg.insertBefore(text, null);
+            }
+            tbody.insertBefore(row, null);
+        }
+    }
+    doc.body.insertBefore(table, null);
+})();
+</script>
+</body>
+</html>

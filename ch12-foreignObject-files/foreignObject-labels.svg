@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="4in" height="6.5in" viewBox="0 0 400 650" >
+    <title>ForeignObjects describing SVG Shapes</title>
+    <style type="text/css">
+        @namespace html "http://www.w3.org/1999/xhtml";  <!--1-->
+        .shape {
+            fill: deepSkyBlue;                   <!--2-->
+            stroke: blueViolet;
+            stroke-width: 3px;          
+            stroke-linecap: round;
+        }
+        .backdrop {
+            fill: #CED;
+        }
+        text {
+            font-size: medium;
+            font-family: serif;
+        }
+        text[role="heading"] { 
+            font: bold 64px sans-serif;        
+            text-decoration: underline overline;  
+        
+            fill: url(#blue-shine) darkBlue;        
+        }
+        html|* {
+            box-sizing: border-box;              <!--3-->
+        }
+        html {
+            height: 100%;                        <!--4-->
+            width: 100%;
+            background-color: white;
+            border: 2px solid lightGray;
+            border-radius: 5px;
+            overflow: auto;                      <!--5-->
+        }
+        p {
+            font-family: sans-serif;             <!--6-->
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0.1em 0.2em;
+        }
+    </style>
+    <linearGradient id="blue-shine" y2="100%">
+        <stop offset="0.1" stop-color="darkBlue" />
+        <stop offset="0.3" stop-color="deepSkyBlue" />
+        <stop offset="0.5" stop-color="dodgerBlue" />
+        <stop offset="0.7" stop-color="darkBlue" />
+    </linearGradient>
+    <rect width="100%" height="100%" class="backdrop" />
+    <g>
+        <line x1="10" y1="10" x2="90" y2="40" class="shape" />
+        <text x="120" y="30" >Line</text>
+        <foreignObject x="10" y="50" width="180" height="90"> <!--5-->
+            <html xmlns="http://www.w3.org/1999/xhtml" 
+                  tabindex="0">                               <!--6-->
+                <p>The <code>&lt;line&gt;</code> element draws
+                    a straight line defined by its start and 
+                    end points.</p>                           <!--7-->
+            </html>
+        </foreignObject>
+    </g>
+    <g transform="translate(200,0)">
+        <rect x="10" y="10" width="80" height="30" rx="5" 
+              class="shape" />
+        <text x="120" y="30" >Rectangle</text>
+        <foreignObject x="10" y="50" width="180" height="90"> <!--8-->
+            <html xmlns="http://www.w3.org/1999/xhtml" 
+                  tabindex="0">
+                <p>The <code>&lt;rect&gt;</code> element draws
+                    a rectangle, optionally with rounded
+                    corners.</p>            
+            </html>
+        </foreignObject>
+    </g>
+    <g transform="translate(0,150)">
+        <circle cx="50" cy="25" r="20" class="shape" />
+        <text x="120" y="30" >Circle</text>
+        <foreignObject x="10" y="50" width="180" height="90">
+            <html xmlns="http://www.w3.org/1999/xhtml" 
+                  tabindex="0">
+                <p>The <code>&lt;circle&gt;</code> element draws
+                    a circle defined by its center-point and
+                    radius.</p>            
+            </html>
+        </foreignObject>
+    </g>
+    <g transform="translate(200,150)">
+        <ellipse cx="50" cy="25" rx="40" ry="20" class="shape" />
+        <text x="120" y="30" >Ellipse</text>
+        <foreignObject x="10" y="50" width="180" height="90">
+            <html xmlns="http://www.w3.org/1999/xhtml" 
+                  tabindex="0">
+                <p>The <code>&lt;ellipse&gt;</code> element draws
+                    an ellipse, which is like a stretched circle
+                    or a rectangle with rounded corners that meet
+                    in the middle.</p>            
+            </html>
+        </foreignObject>
+    </g>
+    <g transform="translate(0,300)">
+        <polygon points="10,10 50,40 90,10 50,25" class="shape" />
+        <text x="120" y="30" >Polygon</text>
+        <foreignObject x="10" y="50" width="180" height="90">
+            <html xmlns="http://www.w3.org/1999/xhtml" 
+                  tabindex="0">
+                <p>The <code>&lt;polygon&gt;</code> element draws
+                    a custom shape by connecting a series of 
+                    points.</p>            
+            </html>
+        </foreignObject>
+    </g>
+    <g transform="translate(200,300)">
+        <polyline points="10,10 50,40 90,10 50,25" 
+                  class="shape" style="fill: none" />
+        <text x="120" y="30" >Polyline</text>
+        <foreignObject x="10" y="50" width="180" height="90">
+            <html xmlns="http://www.w3.org/1999/xhtml" 
+                  tabindex="0">
+                <p>The <code>&lt;polyline&gt;</code> element 
+                    also connects a series of points,
+                    but does not insert a final stroke from the
+                    last point to the first.</p>            
+            </html>
+        </foreignObject>
+    </g>
+    <g transform="translate(0,450)">
+        <path d="M10,10 C15,50 85,50 90,10 L50,25 Z" class="shape" />
+        <text x="50" y="75" text-anchor="middle">Path</text>
+        <foreignObject x="125" y="0" width="265" height="90">
+            <html xmlns="http://www.w3.org/1999/xhtml" 
+                  tabindex="0">
+                <p>The <code>&lt;path&gt;</code> element 
+                    can be used to draw any of the above,
+                    or to create a custom shape with a mixture
+                    of lines, Bézier curves, and arcs.</p>            
+            </html>
+        </foreignObject>
+    </g>
+    <text x="50%" text-anchor="middle" transform="translate(0,625)"
+          textLength="400" lengthAdjust="spacingAndGlyphs"
+          xml:space="preserve" style="whitespace:preserve"
+          role="heading"> SVG Shapes </text>
+</svg>

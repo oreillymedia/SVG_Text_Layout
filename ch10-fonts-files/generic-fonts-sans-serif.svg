@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="4in" height="1in">
+    <title xml:lang="en">Sans-serif font families 
+                        for various scripts</title>
+    <style type="text/css">
+        svg {
+            font-size: 24px;
+        }
+        text {
+            font-family: sans-serif;
+            fill: mediumBlue;
+            fill: url(#stripes) mediumBlue;
+        }
+        [writing-mode="tb"]{
+            writing-mode: vertical-rl;
+        }
+        [glyph-orientation-vertical="0"]{
+            text-orientation: upright;
+        }
+        :lang(en){ 
+            font-family: Verdana, sans-serif;
+        }
+        :lang(ru){ 
+            font-family: Corbel, sans-serif;
+        }
+        :lang(he){ 
+            font-family: Gisha, sans-serif;
+        }
+        :lang(ar){ 
+            font-family: Segoe UI, sans-serif;
+        }
+        :lang(zh-Hans){ 
+            font-family: SimHei, sans-serif;
+        }
+    </style>
+    <pattern id="stripes"
+             patternUnits="userSpaceOnUse" patternTransform="rotate(50)"
+             width="6px" height="10px">
+        <rect fill="mediumBlue" width="2px" height="10px" />
+        <rect fill="mediumpurple" x="2px" width="2px" height="10px" />
+        <rect fill="mediumslateblue" x="4px" width="2px" height="10px" />
+    </pattern>
+    <rect fill="cornsilk" width="100%" height="4em" />
+    <text x="50%" dx="1.2em" y="1.2em" xml:lang="en"
+          >Hello, World!</text>
+    <text x="50%" dx="1.2em" y="3.2em" xml:lang="ru"
+          >Привет мир!</text>
+    <text x="50%" dx="-1.2em" y="1.2em" xml:lang="he" direction="rtl"
+          >שלום העולם!</text>
+    <text x="50%" dx="-1.2em" y="3.2em" xml:lang="ar" direction="rtl"
+          >مرحبا أيها العالم!</text>
+    <text x="50%" xml:lang="zh-Hans" y="0.2em"
+          writing-mode="tb">你好！</text>
+
+</svg>

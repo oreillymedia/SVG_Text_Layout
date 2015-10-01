@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xml:lang="en"
+     width="4in" height="0.8in" viewBox="0 0 400 80" >
+    <title>Basic SVG Text with Transforms</title>
+    <rect width="100%" height="100%" fill="lightYellow" />
+    <text transform="translate(10,64)">SVG Text</text>
+</svg>

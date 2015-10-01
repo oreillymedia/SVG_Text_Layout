@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="400" height="500" viewBox="0 0 400 500"
+     xml:lang="en">
+    <title>Wood Lily</title>
+    <style type="text/css">
+        .backdrop { 
+            fill: powderBlue; 
+        }
+        .flower {
+            fill: orange;
+            stroke: darkOrange;
+        }
+        .flower-spot { 
+            fill: saddleBrown; 
+        }
+        .filament {
+            stroke: #C30;
+            stroke-width: 2px;
+            stroke-linecap: round;
+        }
+        .anther {
+            fill: darkGoldenrod;
+            stroke: goldenrod;
+        }
+        .stigma {
+            fill: orangeRed;
+            stroke: red;
+        }
+        .ovary, .leaf, .stem {
+            fill: yellowGreen;
+            stroke: darkGreen;
+        }
+        .stem {
+            stroke-width: 4px;
+        }
+        .flower-spot, 
+        .stigma, 
+        .ovary {
+            stroke-width: 0.5px;        
+        }
+        .filament, 
+        .stem, 
+        .stripe {
+            fill: none;
+        }
+    </style>
+    <defs>
+        <g id="petal" class="flower" transform="translate(5,0)">
+            <path d="M0,-3 C30,-5 40,-42 100,-5 
+                           C106,-1 106,1 100,5 
+                           C40,42 30,5 0,3Z" />
+            <g class="flower-spot">
+                <ellipse rx="5" ry="2.5" cx="30" cy="-4" />
+                <ellipse rx="5" ry="2"   cx="45" cy="-8" />
+                <ellipse rx="6" ry="3"   cx="40" cy="6" />
+                <ellipse rx="4" ry="2.5" cx="20" cy="3" />
+                <ellipse rx="3" ry="2"   cx="55" cy="2" />
+            </g>                         
+        </g>
+        <use id="petal2" xlink:href="#petal" 
+             transform="scale(1,-1)"/>
+        <g id="leaf" class="leaf">
+            <path d="M1,-2 Q20,-10 60,0 Q20,10 1,2Z" />
+            <path class="stripe" 
+                  d="M1,-1 Q30,-10 58,0
+                     M1,0  Q25,-5  56,0
+                     M3,0  Q40,1   57,0
+                     M2,0  Q23,6   57,0
+                     M1,1  Q29,10  59,0" />
+        </g>
+        <use id="leaf2" xlink:href="#leaf" 
+             transform="scale(1,-1)"/>
+        <g id="stamen">
+            <path class="filament"
+                  d="M0,0 Q0,-40 20,-60" />
+            <ellipse class="anther" rx="6" ry="1.5"
+                     transform="translate(20,-60) rotate(55)" />
+        </g>
+    </defs>
+    <rect class="backdrop" width="100%" height="100%" />
+    <g>
+        <g transform="translate(97,430)">
+            <use xlink:href="#leaf2" transform="rotate(210)"/>
+        </g>
+        <g transform="translate(89,350)">
+            <use xlink:href="#leaf"  transform="rotate(-30)"/>
+            <use xlink:href="#leaf2" transform="rotate(210)"/>
+        </g>
+        <g transform="translate(90,270) scale(1,0.9) rotate(5)">
+            <use xlink:href="#leaf"  transform="rotate(-60)"/>
+            <use xlink:href="#leaf"  transform="rotate(185)"/>
+            <use xlink:href="#leaf2" transform="rotate(230)"/>
+        </g>
+        <g transform="translate(103,180)">
+            <use xlink:href="#leaf"  transform="rotate(220)"/>
+        </g>
+        <path class="stem"
+              d="M100,450 Q70,250 120,120" />
+        <g transform="translate(97,430)">
+            <use xlink:href="#leaf"  transform="rotate(-5)"/>
+        </g>
+        <g transform="translate(89,350)">
+            <use xlink:href="#leaf"  transform="rotate(30)"/>
+        </g>
+        <g transform="translate(90,270) scale(1,0.9) rotate(5)">
+            <use xlink:href="#leaf2" transform="rotate(-10)"/>
+            <use xlink:href="#leaf2" transform="rotate(50)"/>
+            <use xlink:href="#leaf"  transform="rotate(125)"/>
+        </g>
+        <g transform="translate(103,180)">
+            <use xlink:href="#leaf2" transform="rotate(-10)"/>
+            <use xlink:href="#leaf"  transform="rotate(150)"/>
+        </g>
+    </g>
+    
+    <g transform="translate(120,120)">
+        <circle class="flower" r="6" />
+        <use xlink:href="#petal"  transform="rotate( 20)"/>
+        <use xlink:href="#petal2" transform="rotate( 80)"/>
+        <use xlink:href="#petal2" transform="rotate(140)"/>
+        <use xlink:href="#petal"  transform="rotate(200)"/>
+        <use xlink:href="#petal2" transform="rotate(260)"/>
+        <use xlink:href="#petal"  transform="rotate(320)"/>
+        
+        <use xlink:href="#stamen" 
+             transform="scale(-0.8,1) translate(2,-3) rotate(-30)" />
+        <use xlink:href="#stamen" 
+             transform="scale(-1,1.1) translate(2,-2.5) rotate(10)" />
+        <use xlink:href="#stamen" 
+             transform="scale(-1,1.1) skewX(10) translate(3,0) rotate(30)" />
+        <g transform="rotate(15)">
+            <path class="stigma"
+                  d="M-1.5,-10 Q-2,-40 10,-50 
+                     A2,2.5 8 1,1 13,-54
+                     A1.5,2.5 45 1,1 14,-49
+                     Q2,-42 1.5,-10Z" />
+            <path class="ovary"
+                  d="M-3,0 C-3,-15 -1,-15 0,-12 
+                           C1,-15 3,-15 2.5,0
+                           Q0,3 -3,0Z" />
+        </g>
+        <use xlink:href="#stamen" 
+             transform="translate(3,0) rotate(35)" />
+        <use xlink:href="#stamen" 
+             transform="skewY(5) translate(1,2) rotate(55)" />
+        <use xlink:href="#stamen" 
+             transform="skewY(-10) translate(1,2) rotate(120)" />
+    </g>
+    
+    <g>
+        <!-- Text elements will go here -->
+    </g>
+</svg>

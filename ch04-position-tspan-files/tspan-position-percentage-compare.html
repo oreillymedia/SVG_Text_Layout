@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>SVG Resize Adjust</title>
+    <style>
+        body {
+            background-color: royalBlue;
+            width: 20cm;
+            display: table;
+            margin: 0; padding: 0;
+            border-collapse: collapse;
+        }
+        .row {
+            display: table-row;
+        }
+        object {
+            display: table-cell;
+            width: 9.5cm;
+            height: 2.5cm;
+            margin: 0.25cm;
+        }
+        .stretch object {
+            height: 7.5cm;
+        }
+        .squish object {
+            height: 1.5cm;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <object type="image/svg+xml"
+                data="tspan-position-percentage-offset.svg">
+        </object>
+        <object type="image/svg+xml"
+                data="tspan-position-percentage-bottom.svg">
+        </object>
+    </div>
+    <div class="row stretch">
+        <object type="image/svg+xml"
+                data="tspan-position-percentage-offset.svg">
+        </object>
+        <object type="image/svg+xml"
+                data="tspan-position-percentage-bottom.svg">
+        </object>
+    </div>
+    <div class="row squish">
+        <object type="image/svg+xml"
+                data="tspan-position-percentage-offset.svg">
+        </object>
+        <object type="image/svg+xml"
+                data="tspan-position-percentage-bottom.svg">
+        </object>
+    </div>
+</body>
+</html>

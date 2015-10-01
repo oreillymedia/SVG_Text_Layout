@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     width="410px" height="100px" viewBox="0 0 410 100">
+    <title>Faking Baseline Shift in SVG Text</title>
+    <style type="text/css">
+    .formula {
+        font-size: 22pt;
+        text-anchor: middle;
+    }
+    .super, .sub {
+        font-size: 50%;                <!--1-->
+    }
+    .footnote {
+        font-size: 14pt;
+    }
+    .footnote-divider {
+        stroke: dimGray;
+        stroke-width: 2px;
+    }
+    </style>
+    <rect fill="lightYellow" width="100%" height="100%" />
+    <text x="50%" y="1em" dy="1ex" class="formula">You&#8217;re  <!--2-->
+        as sweet as C<tspan class="sub" dy="0.5ex -0.5ex"
+        >6&#8204;</tspan>H<tspan class="sub" dy="0.5ex 0 -0.5ex"
+        >12&#8204;</tspan>O<tspan class="sub" dy="0.5ex -0.5ex"
+        >6&#8204;</tspan>.<tspan class="super" dy="-0.8em"
+        >(1)</tspan></text>                                      <!--3-->
+    <g transform="translate(10,70)">
+        <line x2="40" class="footnote-divider" />
+        <text y="1em" class="footnote">                          <!--4-->
+            <tspan class="super" dy="-0.8em">(1)<tspan dy="0.8em"
+            >&#8204;</tspan></tspan> 
+            Chemical signature of glucose sugar</text>
+    </g>
+</svg>

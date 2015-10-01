@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="4in" height="1in">
+    <title xml:lang="en">Monospace font families 
+                        for various scripts</title>
+    <style type="text/css">
+        svg {
+            font-size: 24px;
+        }
+        text {
+            font-family: monospace;
+            fill: firebrick;
+            fill: url(#stripes) firebrick;
+        }
+        [writing-mode="tb"]{
+            writing-mode: vertical-rl;
+        }
+        [glyph-orientation-vertical="0"]{
+            text-orientation: upright;
+        }
+        :lang(en){ 
+            font-family: Lucida Console, monospace;
+        }
+        :lang(ru){ 
+            font-family: Courier New, monospace;
+        }
+        :lang(he){ 
+            font-family: Miriam Fixed, monospace;
+        }
+        :lang(ar){ 
+            font-family: Simplified Arabic Fixed, monospace;
+        }
+    </style>
+    <pattern id="stripes"
+             patternUnits="userSpaceOnUse" patternTransform="rotate(50)"
+             width="6px" height="10px">
+        <rect fill="coral" width="2px" height="10px" />
+        <rect fill="firebrick" x="2px" width="2px" height="10px" />
+        <rect fill="indianred" x="4px" width="2px" height="10px" />
+    </pattern>
+    <rect fill="lightblue" width="100%" height="4em" />
+    <text x="50%" dx="0.3em" y="1.2em" xml:lang="en"
+          >Hello, World!</text>
+    <text x="50%" dx="0.3em" y="3.2em" xml:lang="ru"
+          >Привет мир!</text>
+    <text x="50%" dx="-0em" y="1.2em" xml:lang="he" direction="rtl"
+          >שלום העולם!</text>
+    <text x="50%" dx="-0em" y="3.2em" xml:lang="ar" direction="rtl"
+          >مرحبا أيها العالم!</text>
+
+</svg>

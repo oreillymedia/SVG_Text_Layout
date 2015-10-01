@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xml:lang="en"
+     width="400" height="200" viewBox="0 0 400 200">
+    <title>Text on a Path -- Start Offset</title>
+    <rect fill="#CEE" width="100%" height="100%" />
+    <path id="path" d="M50,180 C50,0 350,0 350,180" 
+          stroke="royalblue" fill="none"/>
+    <text font-size="50px">
+        <textPath startOffset="-30%" xlink:href="#path">Text on a Path</textPath>
+        <textPath startOffset="130%" text-anchor="end" 
+                  xlink:href="#path">Text on a Path</textPath>
+    </text>
+</svg>

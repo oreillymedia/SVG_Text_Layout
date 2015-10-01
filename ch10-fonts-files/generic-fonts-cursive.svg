@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="4in" height="1in">
+    <title xml:lang="en">Cursive font families</title>
+    <style type="text/css">
+        svg {
+            font-size: 24px;
+        }
+        text {
+            font-family: cursive;
+            fill: sienna;
+            fill: url(#stripes) sienna;
+            font-size: 32px;
+        }
+        [writing-mode="tb"]{
+            writing-mode: vertical-rl;
+        }
+        [glyph-orientation-vertical="0"]{
+            text-orientation: upright;
+        }
+        text:nth-of-type(1){ 
+            font-family: Kunstler Script, cursive;
+        }
+        text:nth-of-type(2){ 
+            font-family: Brush Script MT, cursive;
+        }
+        text:nth-of-type(3){ 
+            font-family: Comic Sans, cursive;
+        }
+        text:nth-of-type(4){ 
+            font-family: Bradley Hand ITC, cursive;
+        }
+    </style>
+    <pattern id="stripes"
+             patternUnits="userSpaceOnUse" patternTransform="rotate(50)"
+             width="6px" height="10px">
+        <rect fill="teal" width="2px" height="10px" />
+        <rect fill="darkturquoise" x="2px" width="2px" height="10px" />
+        <rect fill="cadetblue" x="4px" width="2px" height="10px" />
+    </pattern>
+    <rect fill="lavenderblush" width="100%" height="4em" />
+    <g xml:lang="en">
+        <text x="50%" dx="1em" y="1.2em" 
+              >Hello, World!</text>
+        <text x="50%" dx="1em" y="2.5em" 
+              >Hello, World!</text>
+        <text x="50%" dx="0.5em" y="1.2em" text-anchor="end"
+              >Hello, World!</text>
+        <text x="50%" dx="0.5em" y="2.5em" text-anchor="end"
+              >Hello, World!</text>
+    </g>
+
+</svg>

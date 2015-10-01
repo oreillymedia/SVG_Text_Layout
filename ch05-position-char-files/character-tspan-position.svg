@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+     xml:lang="en" width="10cm" height="3.5cm">
+    <title>Character and tspan Position adjustments</title>
+    <style type="text/css">
+        svg {
+            font-family: serif;
+            font-size: 12mm;
+            fill: navy;
+        }
+        .em {
+            fill: royalBlue;
+        }
+        .strong {
+            stroke: navy;
+            font-style: italic;
+        }
+    </style>
+    <rect fill="#CEE" width="100%" height="100%" />
+    <text x="5mm" y="3cm"
+          dy="-30 30 -30 30 -30 30 -30 30 -30 30 -30 30 -30 30"
+          >One, 
+        <tspan class="em" dy="-15" dx="3mm">Two,</tspan>
+        <tspan class="strong em" dx="3mm"
+               dy="-15 10 10 10 10"
+               >Three!</tspan>
+    </text>
+</svg>

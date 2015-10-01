@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="4in" height="2.3in" viewBox="0 0 400 230">
+    <title xml:lang="en">Hebrew Text on a Curved Path</title>
+    <style type="text/css">
+        text {
+            font: bold italic 48px "Times New Roman", Times, serif;
+            fill: gold;
+            stroke: orangeRed;
+        }
+    </style>
+    <rect fill="#CEE" width="100%" height="100%" />
+    <path id="path" d="M50,200 C50,0 350,0 350,200"
+          fill="none" stroke="darkOrange" />
+    <text text-anchor="middle" dir="rtl" xml:lang="he">
+        <textPath xlink:href="#path" startOffset="50%"
+            >טכסט כתוב בעברית</textPath>
+    </text>
+</svg>

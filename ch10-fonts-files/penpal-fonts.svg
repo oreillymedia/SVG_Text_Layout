@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="4.3in" height="4.3in" viewBox="0 0 400 400">
+    <title>Dear Pen Pal</title>
+    <style type="text/css">
+@font-face {
+    font-family: "hand-writing"; 
+    font-weight: normal;
+    font-style: italic;
+    src: local("Morado Marker"), local("morado-marker"),
+         url("../Fonts/morado marker.woff") format("woff"),
+         url("../Fonts/morado marker.ttf") format("truetype");
+    /* Morado by Peter Wiegel
+       Downloaded from: http://www.dafont.com/morado.font 
+    */
+}
+@font-face {
+    font-family: hand-writing; 
+    src: local("CoolStory"), local("CoolStory Regular"),
+         url("../Fonts/coolstory regular.woff") format("woff"),
+         url("../Fonts/coolstory regular.ttf") format("truetype");
+    /* Cool Story by Peter Olexa 
+       Downloaded from: http://www.dafont.com/coolstory.font 
+    */
+}
+svg {
+    background-color: lightSkyBlue;
+    border: solid thin;
+    margin: 10px;
+
+    font-family: "hand-writing", cursive;
+    font-size: 36px;
+}
+    </style>
+    <defs>
+        <rect id="paper" width="300" height="350" rx="3"/>
+    </defs>
+    <g transform="translate(-5,50) rotate(-20) skewY(5)">
+        <use xlink:href="#paper" transform="translate(-10,15)"
+             fill="black" fill-opacity="0.3"/>
+        <use xlink:href="#paper" fill="linen" stroke="bisque"/>
+        <g transform="translate(0,20)">
+            <text font-style="italic" font-size="48px"
+                  x="30" y="50" >Dear Pen Pal,</text>
+            <text>
+                <tspan x="10" y="100">Today, I received a</tspan>
+                <tspan x="10" dy="50">new letter from my</tspan>
+                <tspan x="10" dy="50">pen pal.  Hooray!</tspan>
+            </text>
+            <text font-style="italic" font-size="48px"
+                  x="100" y="250" >Sincerely,</text>
+            <text x="200" y="300" font-size="larger">Me</text>
+        </g>
+    </g>
+</svg>

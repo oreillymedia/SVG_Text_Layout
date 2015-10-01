@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="4.3in" height="4.5in">
+    <title>Faking Vertical Writing Modes</title>
+    <style type="text/css">
+        svg {
+            font: 20px sans-serif;
+            stroke-width: 2px;
+        }
+        text {
+            fill: currentColor;
+        }
+    </style>
+    <defs>
+        <circle id="anchor" r="3px" fill="currentColor"
+                stroke="currentColor" fill-opacity="0.5"/>
+    </defs>
+    <rect fill="#CEE" width="100%" height="100%" />
+    <g color="darkGreen" text-anchor="start">
+        <g id="sample" fill="currentColor" >
+            <use xlink:href="#anchor" x="1em" y="2em" />
+            <text x="1em" y="2em" >Hi, SVG World!</text>     <!--1-->
+            
+            <use xlink:href="#anchor" x="2.5em" y="3em" />
+            <text x="2.5em" y="3em" >您好SVG世界！</text>
+        </g>
+        <g id="rotated" transform="translate(0,50)" > 
+            <use xlink:href="#anchor" x="1em" y="2em" />
+            <text x="2em" y="-1em" transform="rotate(90)"
+                  dy="1ex"
+                  >Hi, SVG World!</text>                      <!--2-->
+            
+            <use xlink:href="#anchor" x="2.5em" y="3em" />
+            <text x="3em" y="-2.5em" transform="rotate(90)" 
+                  rotate="-90 -90 0 0 0 -90 -90 -90"
+                  dx="1em 0 -0.7em 0 0 1em" dy="1ex"
+                  >您好SVG世界！</text>                         <!--3-->
+        </g> 
+        <g id="upright" transform="translate(100,50)" > 
+            <use xlink:href="#anchor" x="1em" y="2em" />
+            <text  x="1em 1em 1em 1em 1em 1em 1em
+                      1em 1em 1em 1em 1em 1em 1em" 
+                  dy="1em 1em 1em 1em 1em 1em 1em 
+                      1em 1em 1em 1em 1em 1em 1em"
+                  text-anchor="middle"
+                  y="2em" >Hi, SVG World!</text>              <!--4-->
+            
+            <use xlink:href="#anchor" x="2.5em" y="3em" />
+            <text  x="2.5em 2.5em 2.5em 2.5em 2.5em 2.5em 2.5em 
+                      2.5em" 
+                  dy="1em 1em 1em 1em 1em 1em 1em 1em" 
+                  text-anchor="middle"
+                  y="3em" >您好SVG世界！</text>                 <!--5-->
+        </g> 
+    </g>
+    <g color="darkRed" text-anchor="end"
+       transform="translate(200,0)" >   
+        <use xlink:href="#sample" transform="translate(140,0)" />
+        <use xlink:href="#rotated" transform="translate(0,300)" /> <!--6-->
+         
+        <g id="upright-end" transform="translate(100,350)" 
+           text-anchor="middle"> 
+            <use xlink:href="#anchor" x="1em" y="2em" />
+            <text  x="1em 1em 1em 1em 1em 1em 1em
+                      1em 1em 1em 1em 1em 1em 1em" 
+                  dy="-13em 1em 1em 1em 1em 1em 1em 
+                        1em 1em 1em 1em 1em 1em 1em"
+                  y="2em" >Hi, SVG World!</text>              <!--7-->
+            
+            <use xlink:href="#anchor" x="2.5em" y="3em" />
+            <text  x="2.5em 2.5em 2.5em 2.5em 2.5em 2.5em 2.5em
+                      2.5em" 
+                  dy="-7em 1em 1em 1em 1em 1em 1em 1em" 
+                  y="3em" >您好SVG世界！</text> 
+        </g> 
+    </g>
+
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xml:lang="en"
+     width="400px" height="400px" viewBox="0 0 400 400">
+    <title>Explosive Text</title>
+    <style type="text/css">
+        @font-face {
+            font-family: heavy;
+            src: local(GillSans-UltraBold),
+                 local("Gill Sans Ultra Bold"),
+                 local(ShowcardGothic-Reg), 
+                 local("Showcard Gothic"), 
+                 local(Cooper Black),
+                 local(CooperBlack),
+                 local(Arial Black),  
+                 local(Arial-Black),  
+                 local(Impact);
+        }
+        .dynamic-lettering {
+            font-family: heavy, 
+                         "Gill Sans Ultra Bold",  
+                         sans-serif; 
+            font-size: 100px;
+            font-weight: 900;     
+            fill: url(#yellow-red) orangeRed;
+            stroke: url(#red-brown) red;
+            stroke-width: 3px;
+        }
+            
+    </style>
+    <defs>
+        <linearGradient gradientTransform="rotate(90)" id="yellow-red">
+            <stop stop-color="yellow" offset="0"/>
+            <stop stop-color="red" offset="0.8"/>
+            <stop stop-color="maroon" offset="1.0"/>           <!--3-->
+        </linearGradient>
+        <linearGradient gradientTransform="rotate(90)" id="red-brown">
+            <stop stop-color="orangeRed" offset="0"/>
+            <stop stop-color="maroon" offset="1.0"/>
+        </linearGradient>
+    </defs>
+    <rect height="100%" width="100%" fill="aquamarine"/>
+    <g class="dynamic-lettering">
+        <text transform="translate(40,165) rotate(-15)"
+              dy="0 20 -30 20"
+              >BAM!</text>                                     <!--4-->
+        <text x="75" y="375" 
+              dx="0   -70  -30   8 -25"
+              dy="0   -70  -80  50  45" 
+          rotate="-70 -15   35  10  30">BOOM!</text>           <!--5-->
+    </g>
+</svg>

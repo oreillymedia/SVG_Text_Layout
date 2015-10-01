@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="415" height="250" viewBox="0 0 415 250">
+    <title>Text Baseline Comparison</title>
+    <style>
+        svg {
+            text-anchor: middle;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12pt;
+        }
+        line {
+            stroke: lightGray;
+            stroke-width: 2px;
+        }
+        .small {
+            font-size: 75%;
+            font-family: Times New Roman, Times, serif;
+        }
+        tspan {
+            dominant-baseline: inherit;
+        }
+    </style>
+    <defs>
+        <line id="baseline" x1="-100" x2="100"/>
+        <line id="spine" y2="250" />
+    </defs>
+    <g transform="translate(105,0)">
+        <use xlink:href="#spine"/>
+        <g transform="translate(0,50)">
+            <use xlink:href="#baseline"/>
+            <text dominant-baseline="alphabetic">'alphabetic' 
+                <tspan class="small">alignment您好</tspan></text>
+        </g>
+        <g transform="translate(0,100)">
+            <use xlink:href="#baseline"/>
+            <text dominant-baseline="middle">'middle' 
+                <tspan class="small">alignment您好</tspan></text>
+        </g>
+        <g transform="translate(0,150)">
+            <use xlink:href="#baseline"/>
+            <text dominant-baseline="hanging">'hanging' 
+                <tspan class="small">alignment您好</tspan></text>
+        </g>
+        <g transform="translate(0,200)">
+            <use xlink:href="#baseline"/>
+            <text dominant-baseline="text-before-edge"
+                  >'text-before-edge' 
+                <tspan class="small">alignment您好</tspan></text>
+        </g>
+    </g>
+    <g transform="translate(310,0)">            
+        <use xlink:href="#spine"/>
+        <g transform="translate(0,50)">
+            <use xlink:href="#baseline"/>
+            <text dominant-baseline="ideographic">'ideographic' 
+                <tspan class="small">alignment您好</tspan></text>
+        </g>
+        <g transform="translate(0,100)">
+            <use xlink:href="#baseline"/>
+            <text dominant-baseline="central">'central' 
+                <tspan class="small">alignment您好</tspan></text>
+        </g>
+        <g transform="translate(0,150)">
+            <use xlink:href="#baseline"/>
+            <text dominant-baseline="mathematical">'mathematical' 
+                <tspan class="small">alignment您好</tspan></text>
+        </g>     
+        <g transform="translate(0,200)">
+            <use xlink:href="#baseline"/>
+            <text dominant-baseline="text-after-edge"
+                  >'text-after-edge' 
+                <tspan class="small">alignment您好</tspan></text>
+        </g>
+    </g>  
+</svg>

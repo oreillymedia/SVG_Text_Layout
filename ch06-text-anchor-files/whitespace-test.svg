@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xml:space="preserve" width="100%" height="75px"
+        font-size="30px"
+        fill="darkRed">
+    <rect fill="lightSkyBlue" height="100%" width="100%" />
+    <text dy="1em" >  
+        Left aligned 
+        <tspan xml:space="preserve">with…     spaces?</tspan>  
+    </text>
+    <text dy="2em" x="100%" text-anchor="end" xml:space="preserve">
+        Right aligned 
+        <tspan>with…     spaces?</tspan>  
+    </text>
+</svg>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>SVG Text Headings</title>
+    <style>
+        body {
+            background-color: #DEF;
+            font-family: serif;
+        }
+        h1 svg, h2 svg {
+            width: 80%;
+            height: 1em;  
+            display: inline-block;
+            vertical-align: baseline;
+            overflow: visible;
+            padding-bottom: 0.4em;
+            margin-bottom: -0.4em;
+        }
+        h1, h2 {
+            font-family: sans-serif;
+            stroke: darkRed;
+        }
+        h1 {
+            fill: coral;
+        }
+        h2 {
+            fill: lightCoral;
+        }
+    </style>
+</head>
+<body>
+    <h1><svg role="presentation">                          <!--5-->
+        <text y="1em">Level 1 Heading</text>               <!--6-->
+    </svg></h1>
+    <p>An introductory paragraph full of lots of interesting text,
+    which goes on for a few lines to take up space.  Plenty of 
+    space.  Very interesting text.  So interesting, you can&rsquo;t 
+    wait to see:
+    </p>
+    <h2><svg role="presentation">
+        <text y="1em">A subheading</text></svg></h2>
+    <p>Such excitement!  Subheadings after headings.  This must be
+    a really interesting web page to require such exciting headings.
+    We really ought to have another one, to finish things off.
+    </p>
+    <h2><svg role="presentation">
+        <text y="1em">Another sub</text></svg></h2>
+    <p>There.  Now this feels like a proper mock-up.  You can really
+    get the feeling of a full page outline, can&rsquo;t you?
+    </p>
+</body>
+</html>

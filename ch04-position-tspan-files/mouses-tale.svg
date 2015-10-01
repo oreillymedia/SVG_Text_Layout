@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg"  
+     xml:lang="en-GB" width="100%" height="47.5em">
+    <title>The Mouse's Tale - Lewis Carroll</title>
+    <desc>From Alice in Wonderland</desc>
+    <style>
+        svg {
+            font-family: serif;
+            font-size: medium;
+        }
+        text {
+            font-size: 150%;           <!--1-->
+        }
+        .em {
+            font-style: italic;        <!--2-->
+        }
+        .smaller {
+            font-size: 85%;            <!--3-->
+        }
+    </style>
+    <text>                             <!--4-->
+      <tspan dy="1em" x="50%" dx="-2.68em">Fury said to</tspan> <!--5-->
+      <tspan dy="1em" x="50%" dx="-1.65em">a mouse, That</tspan>
+      <tspan dy="1em" x="50%" dx="-1.03em">he met in the</tspan>
+      <tspan dy="1em" x="50%" dx="-0.62em">house, “Let</tspan>  <!--6-->
+      <tspan dy="1em" x="50%" dx="-1.03em">us both go</tspan>
+      <tspan dy="1em" x="50%" dx="-1.44em">to law: 
+                <tspan class="em">I</tspan></tspan>             <!--7-->
+      <tspan dy="1em" x="50%" dx="-2.06em">will prose-</tspan>
+      <tspan dy="1em" x="50%" dx="-2.06em">cute  
+                <tspan class="em">you.</tspan>—</tspan>
+      <tspan class="smaller">                                   <!--8-->
+        <tspan dy="1em" x="50%" dx="-2.19em">Come, I’ll</tspan>
+        <tspan dy="1em" x="50%" dx="-1.7em">take no de-</tspan>
+        <tspan dy="1em" x="50%" dx="-0.73em">nial; We </tspan>
+        <tspan dy="1em" x="50%" dx="-0.24em">must have</tspan>
+        <tspan dy="1em" x="50%" dx="-0em">the trial:</tspan>
+        <tspan dy="1em" x="50%" dx="-0.49em">For really</tspan>
+        <tspan class="smaller">                                 <!--9-->
+          <tspan dy="1em" x="50%" dx="-1.14em">this morn-</tspan>
+          <tspan dy="1em" x="50%" dx="-1.43em">ing I’ve</tspan>
+          <tspan dy="1em" x="50%" dx="-2em">nothing</tspan>
+          <tspan dy="1em" x="50%" dx="-2.57em">to do.”</tspan>
+          <tspan dy="1em" x="50%" dx="-3.14em">Said the</tspan>
+          <tspan dy="1em" x="50%" dx="-3.71em">mouse to</tspan>
+          <tspan dy="1em" x="50%" dx="-4em">the cur,</tspan>
+          <tspan class="smaller">
+            <tspan dy="1em" x="50%" dx="-5.04em">“Such a</tspan>
+            <tspan dy="1em" x="50%" dx="-4.7em">trial, dear</tspan>
+            <tspan dy="1em" x="50%" dx="-4.03em">Sir, With</tspan>
+            <tspan dy="1em" x="50%" dx="-3.36em">no jury</tspan>
+            <tspan dy="1em" x="50%" dx="-2.69em">or judge</tspan>
+            <tspan dy="1em" x="50%" dx="-2.02em">would</tspan>
+            <tspan dy="1em" x="50%" dx="-1.34em">be wast-</tspan>
+            <tspan dy="1em" x="50%" dx="-1.01em">ing our</tspan>
+            <tspan class="smaller">
+              <tspan dy="1em" x="50%" dx="-0.4em">breath.”</tspan>
+              <tspan dy="1em" x="50%" dx="-0em">“I’ll be</tspan>
+              <tspan dy="1em" x="50%" dx="0.79em">judge,</tspan>
+              <tspan dy="1em" x="50%" dx="0.79em">I’ll be</tspan>
+              <tspan dy="1em" x="50%" dx="0.4em">jury,”</tspan>
+              <tspan dy="1em" x="50%" dx="-0em">said</tspan>
+              <tspan dy="1em" x="50%" dx="-0.79em">cun-</tspan>
+              <tspan dy="1em" x="50%" dx="-1.19em">ning</tspan>
+              <tspan class="smaller">
+                <tspan dy="1em" x="50%" dx="-1.86em">old</tspan>
+                <tspan dy="1em" x="50%" dx="-2.79em">Fury:</tspan>
+                <tspan dy="1em" x="50%" dx="-3.26em">“I’ll</tspan>
+                <tspan dy="1em" x="50%" dx="-3.72em">try</tspan>
+                <tspan dy="1em" x="50%" dx="-4.19em">the</tspan>
+                <tspan dy="1em" x="50%" dx="-4.19em">whole</tspan>
+                <tspan dy="1em" x="50%" dx="-3.72em">cause</tspan>
+                <tspan class="smaller">
+                  <tspan dy="1em" x="50%" dx="-3.29em">and</tspan>
+                  <tspan dy="1em" x="50%" dx="-2.19em"
+                                    >condemn</tspan>            <!--10-->
+                  <tspan dy="-0.7em">you to</tspan>
+                  <tspan dy="-0.7em">death!”</tspan>
+                </tspan>
+              </tspan> 
+            </tspan>
+          </tspan>
+        </tspan>                                 <!--11-->
+      </tspan>
+    </text>
+</svg>

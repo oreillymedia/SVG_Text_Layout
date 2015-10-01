@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg"  
+     xml:lang="en-GB" width="4.3in" height="6.5in">
+    <title>The Mouse's Tale - Lewis Carroll</title>
+    <desc>From Alice in Wonderland</desc>
+    <style>
+        svg {
+            font-family: serif;
+            font-size: 20px;    
+            border: solid thin;
+        }
+        .em {
+            font-style: italic;
+        }
+        .smaller {
+            font-size: 85%;
+        }
+    </style>
+    <text>
+      <tspan dy="1em" x="37%">Fury said to</tspan>
+      <tspan dy="1em" x="42%">a mouse, That</tspan>
+      <tspan dy="1em" x="45%">he met in the</tspan>
+      <tspan dy="1em" x="47%">house, "Let</tspan>
+      <tspan dy="1em" x="45%">us both go</tspan>
+      <tspan dy="1em" x="43%">to law: 
+                <tspan class="em">I</tspan></tspan>
+      <tspan dy="1em" x="40%">will prose-</tspan>
+      <tspan dy="1em" x="40%">cute  
+                <tspan class="em">you.</tspan>&#8212;</tspan>
+      <tspan class="smaller">
+        <tspan dy="1em" x="41%">Come, I'll</tspan>
+        <tspan dy="1em" x="43%">take no de-</tspan>
+        <tspan dy="1em" x="47%">nial; We </tspan>
+        <tspan dy="1em" x="49%">must have</tspan>
+        <tspan dy="1em" x="50%">the trial:</tspan>
+        <tspan dy="1em" x="48%">For really</tspan>
+        <tspan class="smaller">
+          <tspan dy="1em" x="46%">this morn-</tspan>
+          <tspan dy="1em" x="45%">ing I've</tspan>
+          <tspan dy="1em" x="43%">nothing</tspan>
+          <tspan dy="1em" x="41%">to do."</tspan>
+          <tspan dy="1em" x="39%">Said the</tspan>
+          <tspan dy="1em" x="37%">mouse to</tspan>
+          <tspan dy="1em" x="36%">the cur,</tspan>
+          <tspan class="smaller">
+            <tspan dy="1em" x="35%">"Such a</tspan>
+            <tspan dy="1em" x="36%">trial, dear</tspan>
+            <tspan dy="1em" x="38%">Sir, With</tspan>
+            <tspan dy="1em" x="40%">no jury</tspan>
+            <tspan dy="1em" x="42%">or judge</tspan>
+            <tspan dy="1em" x="44%">would</tspan>
+            <tspan dy="1em" x="46%">be wast-</tspan>
+            <tspan dy="1em" x="47%">ing our</tspan>
+            <tspan class="smaller">
+              <tspan dy="1em" x="49%">breath."</tspan>
+              <tspan dy="1em" x="50%">"I'll be</tspan>
+              <tspan dy="1em" x="52%">judge,</tspan>
+              <tspan dy="1em" x="52%">I'll be</tspan>
+              <tspan dy="1em" x="51%">jury,"</tspan>
+              <tspan dy="1em" x="50%">said</tspan>
+              <tspan dy="1em" x="48%">cun-</tspan>
+              <tspan dy="1em" x="47%">ning</tspan>
+              <tspan class="smaller">
+                <tspan dy="1em" x="46%">old</tspan>
+                <tspan dy="1em" x="44%">Fury:</tspan>
+                <tspan dy="1em" x="43%">"I'll</tspan>
+                <tspan dy="1em" x="42%">try</tspan>
+                <tspan dy="1em" x="41%">the</tspan>
+                <tspan dy="1em" x="41%">whole</tspan>
+                <tspan dy="1em" x="42%">cause</tspan>
+                <tspan class="smaller">
+                  <tspan dy="1em" x="44%">and</tspan>
+                  <tspan dy="1em" x="46%">condemn</tspan>
+                  <tspan dy="-0.7em" >you to</tspan>
+                  <tspan dy="-0.7em" >death!"</tspan>
+                </tspan>
+              </tspan>
+            </tspan>
+          </tspan>
+        </tspan>
+      </tspan>
+    </text>
+<script><![CDATA[
+(function(){
+    var svg = document.documentElement;
+    var mid = parseFloat(getComputedStyle(svg)["width"])/2;
+
+    var tspans = document.getElementsByTagName("tspan");
+    var t,i,n, x, w;
+
+    for (i=0, n=tspans.length; i<n; i++) {
+        t = tspans[i];
+        if (t.hasAttribute("x") ) {
+            x = t.x.baseVal[0].value;
+            w = t.getComputedTextLength();
+            t.setAttribute("x", "50%");
+            t.setAttribute("dx", x - mid);
+            t.dx.baseVal[0].convertToSpecifiedUnits(SVGLength.SVG_LENGTHTYPE_EMS);
+            t.dx.baseVal[0].valueInSpecifiedUnits = 
+                Math.round(100*t.dx.baseVal[0].valueInSpecifiedUnits)/100;
+        }
+    }
+})();
+]]></script>
+</svg>

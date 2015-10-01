@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+     xml:lang="en-GB" width="4.3in" height="3in">
+    <title>How Doth the Little Crocodile - Lewis Carroll</title>
+    <desc>From Alice in Wonderland</desc>
+    <style>
+@import 
+  url(http://fonts.googleapis.com/css?family=Miltonian+Tattoo); <!--1-->
+      
+        svg {
+            font-family: "Miltonian Tattoo", serif;
+            font-size: 18pt;   
+        }
+        .verse {
+            fill: darkGreen;
+            stroke: #031;
+            word-spacing: 2px;                             <!--2-->
+        }
+        .verse > tspan:nth-child(2n) {                     <!--3-->
+            fill: navy;
+            stroke: #013;
+        }
+    </style>
+    <rect fill="#CEE" width="100%" height="100%" />
+    <text class="verse">                                   <!--4-->
+        <tspan dy="1.2em" x="10"
+               >How doth the little crocodile</tspan>      <!--5-->
+        <tspan dy="1.2em" x="10" dx="1em" 
+               >Improve his shining tail,</tspan>          <!--6-->
+        <tspan dy="1.2em" x="10"
+               >And pour the waters of the Nile</tspan>
+        <tspan dy="1.2em" x="10" dx="1em"
+               >On every golden scale!</tspan>
+      </text>
+    <text class="verse" y="50%">                           <!--7-->
+        <tspan dy="1.2em" x="10"
+               >How cheerfully he seems to grin,</tspan>
+        <tspan dy="1.2em" x="10" dx="1em"
+               >How neatly spreads his claws,</tspan>
+        <tspan dy="1.2em" x="10"
+               >And welcomes little fishes in</tspan>
+        <tspan dy="1.2em" x="10" dx="1em"
+               >With gently smiling jaws!</tspan>
+    </text>
+</svg>

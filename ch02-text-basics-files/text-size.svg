@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xml:lang="en"
+     width="24em" height="4.8em" viewBox="0 0 400 80" >
+    <title>Font-size and SVG Text</title>
+    <style type="text/css">
+        svg { font-size: 12pt; }
+    </style>
+    <rect width="100%" height="100%" fill="lightYellow" />
+    <text x="10px" y="80%" font-size="64px">SVG Text</text>
+</svg>

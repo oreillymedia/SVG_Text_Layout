@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="400" height="160" viewBox="0 0 400 160"
+     xml:lang="en">
+    <title>Characters versus Glyphs</title>
+    <style type="text/css">
+        svg {
+            font-size: 34px;
+            font-family: Georgia, Times, serif;
+            background: lightYellow;
+            border: thin solid gold;
+            margin: 10px;
+        }
+        text {
+            filter: url(#shine);
+            font-weight: bold;
+            stroke-width: 0.5px;
+        }
+        text:nth-of-type(1){
+            stroke: mediumBlue;
+            fill:   royalblue;
+        }
+        text:nth-of-type(2){
+            stroke: darkRed;
+            fill:   crimson;
+        }
+        text:nth-of-type(3){
+            stroke: darkGreen;
+            fill:   green;
+        }
+        text:nth-of-type(4){
+            stroke: purple;
+            fill: darkorchid;
+        }
+    </style>
+    <defs>
+        <filter id="shine">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+            <feColorMatrix values="1.5  0   0  0.5 0
+                                    0  1.5  0  0.5 0
+                                    0   0  1.5 0.5 0
+                                    0   0   0   1  -0.5" />
+            <feOffset dx="-2.5" dy="-1.5" />
+            <feComponentTransfer result="highlight">
+                <feFuncA type="linear" amplitude="2" />
+            </feComponentTransfer>
+            <feComposite in="blur" in2="highlight" operator="arithmetic" 
+                       k1="0" k2="1" k3="1" k4="0" result="lit"/>
+            <feComposite in2="SourceAlpha" operator="in"/>
+            <feComposite in2="SourceGraphic" operator="over" result="clipped"/>
+        </filter>
+    </defs>
+     
+    <text x="10" y="30" font-family="Times New Roman"
+          >Characters are not Glyphs</text>
+    <text x="10" y="70" font-family="Morado Felt"
+          >Characters are not Glyphs</text>
+    <text x="10" y="110" font-family="Palace Script MT"
+          >Characters are not Glyphs</text>
+    <text x="10" y="150" font-family="Old English Text MT"
+          >Characters are not Glyphs</text>
+</svg>

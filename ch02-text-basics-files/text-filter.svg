@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xml:lang="en"
+     width="4in" height="0.8in" viewBox="0 0 400 80" >
+    <title>Filter Effects on SVG Text</title>
+    <style type="text/css">
+        text {
+            font: bold 64px Verdana, Geneva, sans-serif;        
+            text-decoration: underline;          
+            fill: darkBlue;    
+            stroke: indigo;
+            filter: url(#shine);                                <!--1-->
+        }
+    </style>    
+    <defs>
+        <filter id="shine">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" 
+                            result="blur"/>                     <!--2-->
+            <feColorMatrix values="1.5  0   0  0.5 0
+                                    0  1.5  0  0.5 0
+                                    0   0  1.5 0.5 0
+                                    0   0   0   1  -0.5" />     <!--3-->
+            <feOffset dx="-2.5" dy="-1.5" />                    <!--4-->
+            <feComponentTransfer result="highlight">
+                <feFuncA type="linear" amplitude="2" />         <!--5-->
+            </feComponentTransfer>
+            <feComposite in="blur" in2="highlight" 
+                         operator="arithmetic" 
+                         k1="0" k2="1" k3="1" k4="0" />
+            <feComposite in2="SourceGraphic" operator="atop" /> <!--6-->
+        </filter>
+    </defs>
+    <rect width="100%" height="100%" fill="lightYellow" />
+    <text x="10" y="80%">SVG Text</text> 
+</svg>

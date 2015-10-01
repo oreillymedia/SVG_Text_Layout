@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="400" height="450" viewBox="0 0 400 450">
+    <title xml:lang="en">Font Faces and Families</title>
+    <style type="text/css">
+        svg {
+            font-size: 56px;
+            background: #123;
+            border: thin solid hsla(0,0%,100%,0.3);
+            margin: 11px;
+        }
+        text {
+            filter: url(#shine);
+            stroke-width: 0.5px;
+        }
+        
+        .face:nth-of-type(2n){
+            font-weight: bold;
+        }
+        .face:nth-of-type(n+3){
+            font-style: italic;
+        }
+        
+        .family:nth-of-type(1){
+            fill: mediumBlue;
+            stroke: mediumBlue;
+            fill:   royalblue;
+            font-family: Angsana New, AngsanaNew, "Windows 95 - Angsana New",
+                         AngsanaUPC, Angsana, 
+                         cursive;
+        }
+        .family:nth-of-type(2){
+            fill: darkRed;
+            stroke: darkRed;
+            fill:   crimson;
+            font-family: JasmineUPC, "FontMonger:JasmineUPC", 
+                         serif;
+        }
+        .family:nth-of-type(3){
+            stroke: darkGreen;
+            fill:   green;
+            font-family: IrisUPC, "FontMonger:IrisUPC", 
+                         sans-serif;
+        }
+        .family:nth-of-type(4){
+            fill: purple;
+            stroke: purple;
+            fill: darkorchid;
+            font-family: LilyUPC, "FontMonger:LilyUPC", 
+                         fantasy;
+        }
+    </style>
+    <defs>
+        <filter id="shine">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+            <feColorMatrix values="1.5  0   0  0.5 0
+                                    0  1.5  0  0.5 0
+                                    0   0  1.5 0.5 0
+                                    0   0   0   1  -0.5" />
+            <feOffset dx="-2.5" dy="-1.5" />
+            <feComponentTransfer result="highlight">
+                <feFuncA type="linear" amplitude="2" />
+            </feComponentTransfer>
+            <feComposite in="blur" in2="highlight" operator="arithmetic" 
+                       k1="0" k2="1" k3="1" k4="0" result="lit"/>
+            <feComposite in2="SourceAlpha" operator="in"/>
+            <feComposite in2="SourceGraphic" operator="over" result="clipped"/>
+        </filter>
+        <text id="t" x="0.5ex">พิมพ์ไทย</text>
+        <g id="s">
+            <use class="face" xlink:href="#t" y="0.9em" />
+            <use class="face" xlink:href="#t" y="1.8em" />
+            <use class="face" xlink:href="#t" x="50%" y="0.9em" />
+            <use class="face" xlink:href="#t" x="50%" y="1.8em" />
+        </g>
+    </defs>
+    <use class="family" xlink:href="#s" />
+    <use class="family" xlink:href="#s" y="2em" />
+    <use class="family" xlink:href="#s" y="4em" />
+    <use class="family" xlink:href="#s" y="6em" />
+</svg>

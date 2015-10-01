@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xml:lang="en"
+     height="50px" width="410px">
+    <title>Gradient-Filled Text</title>
+    <defs>
+        <linearGradient id="fade">
+            <stop stop-color="black" stop-opacity="1" offset="0"/>
+            <stop stop-color="black" stop-opacity="0" offset="1"/>
+        </linearGradient>
+    </defs>
+    <g transform="translate(10,40)"
+       style="font-family: Arial;
+              font-weight: bold;
+              font-size: 24pt;
+              fill: url('#fade');">
+        <text>A Whiter Shade of Pale</text>
+    </g>
+</svg>

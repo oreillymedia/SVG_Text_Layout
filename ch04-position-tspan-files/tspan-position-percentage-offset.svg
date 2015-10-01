@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg"  
+     xml:lang="en" width="10cm" height="2.5cm">
+    <title>Centering tspan Position</title>
+    <style type="text/css">
+        svg {
+            font-family: serif;
+            font-size: 12mm;
+            fill: navy;
+        }
+        .em {
+            fill: royalBlue;
+        }
+        .strong {
+            stroke: navy;
+            font-style: italic;
+        }
+    </style>
+    <rect fill="#CEE" width="100%" height="100%" />
+    <text x="5mm" y="50%" dy="0.85cm">One, 
+        <tspan class="em" dy="-0.5cm">Two,</tspan>
+        <tspan class="strong em" dy="-0.5cm">Three!</tspan>
+    </text>
+</svg>
