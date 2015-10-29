@@ -1,6 +1,6 @@
 html {
-  background-color: #d8e8f0;
-  background: linear-gradient(-45deg, #eee, #cdf, #eee 140vw);
+  background-color: #ffd;
+  background: linear-gradient(-45deg, #ffd, #fea, #ffd 140vw);
   min-height: 100%;
 }
 body {
@@ -23,7 +23,7 @@ header, footer {
   font-family: Georgia, serif;
   font-style: italic;
   font-size: 1.2rem;
-  color: #212;
+  color: #216;
 }
 header p, footer p {
   margin: 0.2em auto;
@@ -31,7 +31,7 @@ header p, footer p {
 }
 header h1 {
   margin: 0.5em 0;
-  text-shadow: 1.5px 1px #a8c;
+  text-shadow: 1.5px 1px #b8a;
 }
 footer {
   border-top: solid thin currentColor;
@@ -41,10 +41,10 @@ main {
   font-family: Tahoma, sans-serif;
   font-size: 1.2rem;
   line-height: 1.2;
-  color: #023;
+  color: #302;
 }
 main h1 {
-  text-shadow: 1.5px 1px #8ad;
+  text-shadow: 1.5px 1px #e86;
 }
 main > *, footer {
   max-width: 40rem;
@@ -54,7 +54,7 @@ li {
   margin-bottom: 1em;
   margin-left: 0.5em;
   list-style-image: radial-gradient(closest-side, 
-    #468, #023 98%, transparent 100%);
+    #606, #302 98%, transparent 100%);
 }
 li ul {
   padding-left: 1.5em;
@@ -62,15 +62,15 @@ li ul {
 li li {
   margin: 0.1em;
   list-style-image: radial-gradient(closest-side, 
-    #8ad, #246 98%, transparent 100%);
+    #b8a, #606 98%, transparent 100%);
 }
 
-:link {
-  color: #138;
+:link, :link * {
+  color: #129;
   text-decoration-style: dotted;
 }
 :visited {
-  color: #426;
+  color: #606;
 }
 header :link, header :visited {
   color: inherit;
