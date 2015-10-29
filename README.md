@@ -2,7 +2,7 @@ SVG Text Layout
 ==========
 
 <img style="float:left; display: block;" src="http://akamaicovers.oreilly.com/images/0636920043072/cat.gif" />
-This is the example code that accompanies <cite>SVG Text Layout</cite> by Amelia Bellamy-Royds and Kurt Cagle. 
+This is the example code that accompanies _SVG Text Layout_ by Amelia Bellamy-Royds and Kurt Cagle. 
 
 To view the files on the web, start with [the table of contents on GitHub Pages](http://oreillymedia.github.io/SVG_Text_Layout/).
 
